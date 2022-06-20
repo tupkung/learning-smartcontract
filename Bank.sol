@@ -14,7 +14,7 @@ contract Bank {
         _totalSupply += msg.value;
     }
 
-    function withdraw(uint amount) public payable{
+    function withdraw(uint amount) public {
         require(amount <= _balances[msg.sender], "not enough money");
 
         payable(msg.sender).transfer(amount);
