@@ -67,4 +67,8 @@ contract Election {
 
         return _issues[_issueId].ballots[msg.sender];
     }
+
+    function scores() public view returns(uint[] memory scores_) {
+        return _issues[_issueId].scores;
+    }
 }
